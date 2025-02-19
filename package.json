@@ -11,7 +11,6 @@
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
     "@emotion/is-prop-valid": "latest",
-    "@googlemaps/js-api-loader": "latest",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",
@@ -44,7 +43,6 @@
     "@tsparticles/engine": "latest",
     "@tsparticles/react": "latest",
     "@tsparticles/slim": "latest",
-    "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -83,7 +81,8 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.7.3"

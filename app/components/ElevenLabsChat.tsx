@@ -7,6 +7,12 @@ export default function ElevenLabsChat() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    // Check if script is already loaded
+    if (document.querySelector('script[src="https://elevenlabs.io/convai-widget/index.js"]')) {
+      setIsLoaded(true)
+      return
+    }
+
     const script = document.createElement("script")
     script.src = "https://elevenlabs.io/convai-widget/index.js"
     script.async = true
@@ -28,7 +34,7 @@ export default function ElevenLabsChat() {
     document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script)
+      // Don't remove the script on unmount to prevent re-registration issues
       script.removeEventListener("load", handleLoad)
       script.removeEventListener("error", handleError)
     }
@@ -45,4 +51,3 @@ export default function ElevenLabsChat() {
 
   return <div className="fixed bottom-4 right-4 z-50" data-elevenlabs-convai data-agent-id="YnayAQPQdHpYGV4M6SZw" />
 }
-

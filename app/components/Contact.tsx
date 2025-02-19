@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Globe } from 'lucide-react'
-import LocationMap from './LocationMap'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -109,7 +108,14 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-semibold mb-4">Τοποθεσία</h3>
-              <LocationMap />
+              <div className="w-full h-96 rounded-lg shadow-lg bg-gray-800 flex items-center justify-center">
+                <p className="text-gray-400 text-center p-4">
+                  Μπορείτε να μας βρείτε στη διεύθυνση:<br />
+                  <span className="text-sm">
+                    Κύπρου 40, Πολίχνη, Θεσσαλονίκη
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
           <div>
@@ -182,4 +188,3 @@ export default function Contact() {
     </section>
   )
 }
-
