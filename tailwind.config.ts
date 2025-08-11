@@ -56,6 +56,8 @@ const config: Config = {
         'neon-purple': 'var(--neon-purple)',
         'neon-green': 'var(--neon-green)',
         'neon-pink': 'var(--neon-pink)',
+        'gold': 'var(--gold)',
+        'gold-dark': 'var(--gold-dark)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,6 +89,10 @@ const config: Config = {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(100%)" },
         },
+        "text-glow": {
+          "0%, 100%": { "text-shadow": "0 0 5px var(--gold-dark), 0 0 10px var(--gold-dark)" },
+          "50%": { "text-shadow": "0 0 10px var(--gold-dark), 0 0 20px var(--gold-dark)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -95,6 +101,7 @@ const config: Config = {
         "fade-out": "fade-out 0.2s ease-in",
         "slide-in": "slide-in 0.2s ease-out",
         "slide-out": "slide-out 0.2s ease-in",
+        "text-glow": "text-glow 2s ease-in-out infinite",
       },
     },
   },
